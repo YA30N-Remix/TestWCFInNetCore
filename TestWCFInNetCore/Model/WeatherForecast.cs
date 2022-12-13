@@ -1,4 +1,4 @@
-namespace TestWCFInNetCore
+namespace TestWCFInNetCore.Model
 {
     public class WeatherForecast
     {

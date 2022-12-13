@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 
+using TestWCFInNetCore.Model;
+
 namespace TestWCFInNetCore.Controllers
 {
     [ApiController]
@@ -19,7 +21,7 @@ namespace TestWCFInNetCore.Controllers
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
-        public IEnumerable<WeatherForecast> Get()
+        public IEnumerable<WeatherForecast> Get(string ServiceName, string Method)
         {
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
@@ -29,5 +31,6 @@ namespace TestWCFInNetCore.Controllers
             })
             .ToArray();
         }
+
     }
 }

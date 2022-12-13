@@ -9,6 +9,7 @@
   <ItemGroup>
     <PackageReference Include="CoreWCF.Http" Version="1.2.1" />
     <PackageReference Include="CoreWCF.Primitives" Version="1.2.1" />
+    <PackageReference Include="Microsoft.Extensions.Primitives" Version="6.0.2-mauipre.1.22102.15" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
