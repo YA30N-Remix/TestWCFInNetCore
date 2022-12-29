@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-using TestWCFInNetCore.Model;
+using TestWCFInNetCore.ViewModel;
 
 namespace TestWCFInNetCore.Controllers
 {

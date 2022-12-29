@@ -1,6 +1,6 @@
 ﻿using CoreWCF;
 
-using TestWCFInNetCore.Model;
+using TestWCFInNetCore.ViewModel;
 
 namespace TestWCFInNetCore.Services
 {

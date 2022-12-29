@@ -3,7 +3,7 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.Serialization;
 
-namespace TestWCFInNetCore.Model
+namespace TestWCFInNetCore.ViewModel
 {
     [DataContract]
     public class EchoFault

@@ -3,6 +3,9 @@ using CoreWCF.Channels;
 using CoreWCF.Configuration;
 using CoreWCF.Description;
 
+using Microsoft.EntityFrameworkCore;
+
+using TestWCFInNetCore.Models;
 using TestWCFInNetCore.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,7 +20,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+                                   
+builder.Services.AddDbContext<ERPContext>(options => options.UseSqlServer(builder.Configuration["ConnectionStrings:ERPTestDbContext"]));
 
 builder.Services.AddServiceModelServices().AddServiceModelMetadata();
 builder.Services.AddSingleton<IServiceBehavior, UseRequestHeadersForMetadataAddressBehavior>();
@@ -26,6 +30,7 @@ builder.Services
     .AddServiceModelServices()
     .AddServiceModelMetadata()
     .AddSingleton<IServiceBehavior, UseRequestHeadersForMetadataAddressBehavior>();
+
 
 var app = builder.Build();
 
